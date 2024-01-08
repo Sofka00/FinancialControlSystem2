@@ -24,5 +24,9 @@ namespace FinancialControlSystem2
         {
             InitializeComponent();
         }
+
+        
     }
+
+       
 }
