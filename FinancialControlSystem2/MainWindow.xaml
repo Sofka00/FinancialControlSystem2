@@ -51,7 +51,7 @@
                 </Grid>
             </TabItem>
 
-            <TabItem x:Name="tabletsTab" Header="sssss" Height="22" Margin="100,0,-200,0" VerticalAlignment="Center" RenderTransformOrigin="0.472,0.819" FontSize="16">
+            <TabItem x:Name="tabletsTab" Header="qqqq" Height="22" Margin="100,0,-200,0" VerticalAlignment="Center" RenderTransformOrigin="0.472,0.819" FontSize="16">
 
                 <Canvas>
                     <ListBox Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,46,0,0" Grid.RowSpan="2"/>
