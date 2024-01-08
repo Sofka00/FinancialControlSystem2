@@ -5,8 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinancialControlSystem2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="1000">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.ColumnSpan="4" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Главная" Margin="-1,-2,-100,0">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="46*"/>
+                        <RowDefinition Height="181*"/>
+                        <RowDefinition Height="39*"/>
+                        <RowDefinition Height="188*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="304*"/>
+                        <ColumnDefinition Width="193*"/>
+                        <ColumnDefinition Width="497*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Счета" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.524,0.703" Width="497" Grid.Column="2" FontSize="22" Height="46"/>
+                    <Label Content="Добавление счета" HorizontalAlignment="Left" VerticalAlignment="Top" Height="45" Width="495" RenderTransformOrigin="0.5,0.5" Margin="1,-2,0,0" FontSize="22" Grid.ColumnSpan="2">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                    <ListBox Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,46,0,0" Grid.RowSpan="2"/>
+                    <Button Content="Добавить счет" HorizontalAlignment="Left" Margin="117,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="49" Width="217" Grid.ColumnSpan="2"/>
+                    <Button Content="Информация" HorizontalAlignment="Left" Margin="155,91,0,0" Grid.Row="1" VerticalAlignment="Top" Height="31" Width="141"/>
+                    <Label Content="Статистика по категориям" HorizontalAlignment="Left" Margin="0,181,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.RowSpan="2" Width="492" FontSize="22" Grid.ColumnSpan="2"/>
+                    <Label Grid.Column="2" Content="Баланс" HorizontalAlignment="Left" Margin="0,181,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.RowSpan="2" Width="513" FontSize="22"/>
+                    <Label Content="диограмма" HorizontalAlignment="Left" Margin="117,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="157"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="tabletsTab" Header="sssss" Height="22" Margin="100,0,-200,0" VerticalAlignment="Center" RenderTransformOrigin="0.472,0.819" FontSize="16">
+
+                <Canvas>
+                    <ListBox Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,46,0,0" Grid.RowSpan="2"/>
+                    <Button Content="Добавить счет" HorizontalAlignment="Left" Margin="117,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="49" Width="217" Grid.ColumnSpan="2"/>
+                    <Button Content="Информация" HorizontalAlignment="Left" Margin="155,91,0,0" Grid.Row="1" VerticalAlignment="Top" Height="31" Width="141"/>
+                    <Label Content="Статистика по категориям" HorizontalAlignment="Left" Margin="0,181,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.RowSpan="2" Width="492" FontSize="22" Grid.ColumnSpan="2"/>
+                    <Label Grid.Column="2" Content="Баланс" HorizontalAlignment="Left" Margin="0,181,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.RowSpan="2" Width="513" FontSize="22"/>
+                    <Label Content="диограмма" HorizontalAlignment="Left" Margin="117,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="157"/>
+
+                </Canvas>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
